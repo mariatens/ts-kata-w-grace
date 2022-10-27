@@ -1,8 +1,8 @@
 // helper function
-function getMaximum(inputArr: number[]): number{
+function getMaximum(inputArr: any[]): number{
     let maxSoFar = inputArr[0]
     for (const num of inputArr){
-        if (num > maxSoFar){
+        if (typeof num !== "string" && num > maxSoFar){
             maxSoFar = num
         }
     }
