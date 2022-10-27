@@ -1,19 +1,13 @@
-// function getMaximums(inputArrs: number[][]): number[] {
-    
-//     return 
-// }
+import getMaximum from "./1-nested-array-helper"
 
-// helper function
-function getMaximum(inputArr: number[]): number{
-    let maxSoFar = inputArr[0]
-    for (const num of inputArr){
-        if (num > maxSoFar){
-            maxSoFar = num
-        }
+function getMaximums(inputArrs: number[][]): number[] {
+    const maximums = []
+    for (const inputArr of inputArrs){
+        const maximum  = getMaximum(inputArr)
+        maximums.push(maximum)
     }
-    return maxSoFar
+    return maximums
 }
 
-// console.log(getMaximums([[1,2], [2,3]]), [2,3])
 
-export default getMaximum;
+export default getMaximums;
